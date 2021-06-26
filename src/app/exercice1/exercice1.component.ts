@@ -5,12 +5,17 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './exercice1.component.html',
   styleUrls: ['./exercice1.component.css']
 })
-export class Exercice1Component implements OnInit {
-  public compteur: number = 0; 
+export class Exercice1Component {
+  public result = 0;
 
   constructor() { }
 
-  ngOnInit() {
+  increment(operator): void {
+    console.log(operator);
+    if (operator === '+') {
+      this.result += 1;
+    } else {
+      this.result -= 1;
+    }
   }
-
 }
